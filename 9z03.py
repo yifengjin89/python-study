@@ -112,8 +112,8 @@ str5 = "sunck is a good man!  sunck is a good man! sunck is a nice man!" \
        " sunck is a big man!, sunck is a cool man!"
 dict2 = {}
 list3 = str5.split(" ")  # 1. 以空格切割字符串
-print("l = %s" % list3)
-# output: l = ['sunck', 'is', 'a', 'good', 'man!', '', 'sunck', 'is', 'a', 'good', 'man!', 'sunck', 'is',
+print("list3 = %s" % list3)
+# output: list3 = ['sunck', 'is', 'a', 'good', 'man!', '', 'sunck', 'is', 'a', 'good', 'man!', 'sunck', 'is',
 # 'a', 'nice', 'man!', 'sunck', 'is', 'a', 'big', 'man!,', 'sunck', 'is', 'a', 'cool', 'man!']
 
 for KEY in list3:  # 2. 循环处理列表中的每个元素
