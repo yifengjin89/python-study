@@ -41,3 +41,4 @@ while 1:
     else:  # n = 1
         print(licDict[allTimeList[n - 1]])  # allTimeList[n - 1] = 3.5 == licDict[3.5] == '传奇'
         break
+
