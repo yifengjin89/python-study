@@ -2,6 +2,7 @@
 # Tuple  不支持修改
 # 节省内存空间，并且可以作为KEY 在 dict内
 # List 不可以作为 hash 的 KEY， 如果要用LIST 作为 KEY, 必须要先转Tuple
+# 什么时候使用： 降低内存消耗； 作为hash 的key； 其他情况使用list
 tuple1 = (1, 2, 3, 2, [5, 6, 7])
 t2 = list(tuple1)
 print(t2)
