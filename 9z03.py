@@ -1,5 +1,5 @@
 # 1/6/2020
-# Tuple
+# Tuple  不支持修改
 # 节省内存空间，并且可以作为KEY 在 dict内
 # List 不可以作为 hash 的 KEY， 如果要用LIST 作为 KEY, 必须要先转Tuple
 tuple1 = (1, 2, 3, 2, [5, 6, 7])
@@ -8,6 +8,7 @@ print(t2)
 # output: [1, 2, 3, 2, [5, 6, 7]]
 tuple2 = (10,)
 print(tuple2) # output: (10,) 当只有一个元素在tuple里， 必须加逗号
+tuple3 = ([1, 2, 3]) # tuple 转 list
 print("===========================================================")
 
 # List 去重复
