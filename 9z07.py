@@ -70,3 +70,67 @@ def modify2(nums2):   # 引用对象 (nums2) 指向内部修改 等价于 修改
 array2 = [4, 5, 6]
 modify2(array2)
 print("array2 = %s" % array2)  # output: array2 = [4, 5, 1000]
+
+# LinkedList Class的接口
+class ListNode:
+
+    def __init__(self, val):
+        self.val = val    # assign value
+        self.next = None  # Initialize next as null
+
+
+class LinkedList:
+
+    def __init__(self):
+        # dummy 虚拟的哨兵节点
+        self.dummy = ListNode(-1)
+
+    def get(self, location):  # 读取操作 ； 获取location位置上的node的value
+        p = self.dummy.next
+        for i in range(location):
+            p = p.next
+
+        return p.val
+
+    def contains(self, val):   # 查找操作 ； 判断链表中是否含有value值得node
+        p = self.dummy.next
+        while p is not None:
+            if p.val == val:
+                return True
+            p = p.next
+
+        return False
+
+    def add(self, location, val):  # 插入操作 ； 在location的位置上插入一个值为value的node
+        p = self.dummy
+        for i in range(location):
+            p = p.next
+
+        node = ListNode(val)
+        node.next = p.next
+        p.next = node
+
+    def remove(self, location):  # 删除操作 删除location位置上的元素
+        p = self.dummy
+        for i in range(location):
+            p = p.next
+
+        p.next = p.next.next
+
+    def empty(self):
+        return self.dummy.next is None
+
+
+linkedList = LinkedList()
+
+linkedList.dummy = ListNode(0)
+head = ListNode(10)
+second = ListNode(20)
+
+linkedList.dummy.next = head
+head.next = second
+
+for i in range(3):
+    linkedList.add(i, 8)
+print(linkedList.get(2))  # output: 100
+print(linkedList.contains(100))
