@@ -140,13 +140,8 @@ if __name__ == "__main__":
     print(linkList_obj.length())        # 判断链表长度     output： 0
     print("=====================================")
 
-    linkList_obj.append(1)
-    print(linkList_obj.is_empty())  # 判断是否为空链表  output：False
-    print(linkList_obj.length())    # 判断链表长度     output： 1
-    print("=====================================")
-
-    linkList_obj.append(2)          # 尾插入 元素 2
     linkList_obj.add(100)           # 头插入 元素 100
+    linkList_obj.append(2)  # 尾插入 元素 2
     linkList_obj.append(3)          # 尾插入 元素 3
     linkList_obj.travel()           # output: 100, 1, 2, 3
     print("=====================================")
@@ -180,6 +175,6 @@ if __name__ == "__main__":
     linkList_obj.travel()
     print("=====================================")
 
-    
+
     
 
