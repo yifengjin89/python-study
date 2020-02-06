@@ -5,11 +5,10 @@
 # 什么时候使用： 降低内存消耗； 作为hash 的key； 其他情况使用list
 tuple1 = (1, 2, 3, 2, [5, 6, 7])
 t2 = list(tuple1)
-print(t2)
-# output: [1, 2, 3, 2, [5, 6, 7]]
+print(t2)  # output: [1, 2, 3, 2, [5, 6, 7]]
 tuple2 = (10,)
-print(tuple2) # output: (10,) 当只有一个元素在tuple里， 必须加逗号
-tuple3 = ([1, 2, 3]) # tuple 转 list
+print(tuple2)  # output: (10,) 当只有一个元素在tuple里， 必须加逗号
+tuple3 = ([1, 2, 3])  # tuple 转 list
 print("===========================================================")
 
 # List 去重复
@@ -28,39 +27,33 @@ print("===========================================================")
 str1 = "sunck,,is,,,a,good,,man"
 list1 = str1.split(",")
 count = 0
-print("list1 = %s " % (list1))
-# output: list1 = ['sunck', '', 'is', '', '', 'a', 'good', '', 'man']
+print("list1 = %s " % (list1))  # output: list1 = ['sunck', '', 'is', '', '', 'a', 'good', '', 'man']
 
 for i in list1:
     if len(i) > 0:
         count += 1
-print("count word = %d" % count)
-# output: count word = 5
+print("count word = %d" % count)  # output: count word = 5
 
 print("===========================================================")
 str2 = " ".join(list1)  # 以指定的字符串分隔符，组合成一个字符串
-print("重组被分割的字符串： %s" % str2)
-# output: 重组被分割的字符串： sunck  is   a good  man
+print("重组被分割的字符串： %s" % str2)  # output: 重组被分割的字符串： sunck  is   a good  man
 
 list2 = str2.split()
-print("list2 = %s " % list2)
-# output : list2 = ['sunck', 'is', 'a', 'good', 'man']
+print("list2 = %s " % list2)  # output : list2 = ['sunck', 'is', 'a', 'good', 'man']
 
 str3 = " ".join(list2)
-print("str3 :  %s" % str3)
-# output : str3 :  sunck is a good man
+print("str3 :  %s" % str3)  # output : str3 :  sunck is a good man
 
 print("===========================================================")
 
 # String replace
 str3 = "sunck is a good good good man"
 str4 = str3.replace("good", "nice", 1)
-print("str3: %s" % str3)
-# output : str3: sunck is a good good good man
-print("replace good to nice : %s" % str4)
-# output: replace good to nice : sunck is a nice good good man
+print("str3: %s" % str3)  # output : str3: sunck is a good good good man
 
+print("replace good to nice : %s" % str4)  # output: replace good to nice : sunck is a nice good good man
 print("===========================================================")
+
 # isalnum :  string contain 字母 or 数字， return True
 str4 = "123"
 str5 = "123ABC"
@@ -75,11 +68,9 @@ print("===========================================================")
 # 使用字典， 学生姓名为Key， 成绩为 Value
 dict1 = {"Tom": 60, "Lilei": 70}
 # 元素的访问   获取：字典名[key]
-print("Tom : %s" % dict1["Tom"])
-# output: Tom : 60
+print("Tom : %s" % dict1["Tom"])  # output:  60
 
-print("Tom : %s" % dict1.get("Tom"))
-# output: Tom : 60
+print("Tom : %s" % dict1.get("Tom"))  # output: 60
 
 ret = dict1.get("Tom")
 if ret == None:
@@ -90,12 +81,13 @@ else:
 
 print("===========================================================")
 # 添加 ，修改 和删除
+print("before dict1 revised = %s" % dict1)  # output: before dict1 revised = {'Tom': 60, 'Lilei': 70}
 dict1["Hameimei"] = 90  # dict1 里没有这个key， 就是添加
 dict1["Lilei"] = 80  # dict1 里面有个这个key， 就是修改
 dict1["Lilei"] = dict1["Lilei"] + 1
-dict1.pop("Tom")  # 删除 key
-print("dict1 = %s" % dict1)
-# output: dict1 = {'Lilei': 81, 'Hameimei': 90}
+dict1.pop("Tom")  # 删除 key and value
+print("after dict1 revised = %s" % dict1)  # output: after dict1 revised = dict1 = {'Lilei': 81, 'Hameimei': 90}
+print("===========================================================")
 
 for key in dict1.keys():  # print key only
     print(key)
