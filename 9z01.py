@@ -13,7 +13,7 @@ print(chr(65 + ord(letter) - 97)) # chr(ord('A') + (ord('letter') - ord('a'))
 # output: T
 #print(letter.upper())
 print("===========================================================")
-n = [2,3,4,5]
+n = [2, 3, 4, 5]
 for index, value in enumerate(n):
     print(index, value)
 '''
